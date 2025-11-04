@@ -1,7 +1,7 @@
 # BNX PLATFORM
 Intern → feature/frontend-ui → Pull Request → dev → main → Deploymen
 
-# 🚀 BillNeXX-AI-Technologies – Complete Git Branching & Workflow Guide
+# 🚀 BillNeXX-AI-Technologies – Complete Git Branching & Workflow Guide (Experince)
 
 Welcome to **BillNeXX-AI-Technologies** 🧠
 This document explains how our team manages branches, pushes updates, and maintains stability in the **BNX-PLATFORM** project.
@@ -373,7 +373,7 @@ Every developer at **BillNeXX-AI-Technologies** must follow this workflow to ens
 
 
 
-# 🚀 BillNeXX-AI-Technologies – Intern Git & Branching Guide (Ready-to-Upload)
+# 🚀 BillNeXX-AI-Technologies – Intern Git & Branching Guide  (New)
 
 Welcome to **BillNeXX-AI-Technologies** — BNX-PLATFORM 👋  
 This guide is written for **interns and new contributors**. Paste this file as `README_FOR_INTERNS.md` or `README.md` inside `BNX-PLATFORM` on GitHub.
@@ -578,6 +578,5 @@ git push origin --delete feature/name
 
 ---
 
-_End of guide — ready to be pasted as `README_FOR_INTERNS.md` or `README.md` in BNX-PLATFORM._
 
 
