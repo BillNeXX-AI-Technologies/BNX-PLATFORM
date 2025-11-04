@@ -360,3 +360,224 @@ Every developer at **BillNeXX-AI-Technologies** must follow this workflow to ens
 * or 🎨 **Convert it into a well-designed PDF with your logo and colors (for intern onboarding manual)**?
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 🚀 BillNeXX-AI-Technologies – Intern Git & Branching Guide (Ready-to-Upload)
+
+Welcome to **BillNeXX-AI-Technologies** — BNX-PLATFORM 👋  
+This guide is written for **interns and new contributors**. Paste this file as `README_FOR_INTERNS.md` or `README.md` inside `BNX-PLATFORM` on GitHub.
+
+---
+
+## 🧭 Branch Flow Overview
+```
+main  →  Live Production (Stable)
+│
+└── dev  →  Development & Testing
+     │
+     └── feature/<feature-name>  →  Individual Feature Work
+```
+
+---
+
+## 1. Quick Summary (5 lines)
+1. Clone the repo.  
+2. Switch to `dev`.  
+3. Create `feature/<task>` branch.  
+4. Commit & Push.  
+5. Open PR → Merge to `dev` → Test → Merge `dev` → `main`.
+
+---
+
+## 2. Full Step-by-Step (Beginner-friendly)
+
+### Step 0 — One-time Git setup (on your laptop)
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+```
+This sets identity for your commits.
+
+---
+
+### Step 1 — Clone the repository
+```bash
+git clone https://github.com/BillNeXX-AI-Technologies/BNX-PLATFORM.git
+cd BNX-PLATFORM
+```
+
+---
+
+### Step 2 — Check current branch & update
+```bash
+git branch         # shows local branches, * means current branch
+git checkout main
+git pull origin main
+```
+
+---
+
+### Step 3 — Switch to `dev` (create if not present)
+```bash
+git checkout dev
+git pull origin dev
+# OR if it doesn't exist locally:
+git checkout -b dev
+```
+
+---
+
+### Step 4 — Create your feature branch
+Always create feature branches from `dev`:
+```bash
+git checkout dev
+git pull origin dev
+git checkout -b feature/<your-name>-<task>
+# example:
+git checkout -b feature/nikhil-homepage
+```
+
+---
+
+### Step 5 — Work, commit, push
+Edit files, test locally. Then:
+```bash
+git add .
+git commit -m "feat(frontend): Add responsive homepage layout"
+git push origin feature/nikhil-homepage
+```
+
+**Commit message tips:** short, start with type (feat/fix/docs/chore), then scope and short description.
+
+---
+
+### Step 6 — Create Pull Request (on GitHub)
+1. Open repo → Click **Pull requests** → **New pull request**.  
+2. Set **base** to `dev`, **compare** to your `feature/...` branch.  
+3. Title: `feat(frontend): Add homepage`  
+4. Description: What changed, how to test, screenshots (if UI).  
+5. Assign reviewer (Ravi) and click **Create pull request**.
+
+---
+
+### Step 7 — Review → Merge → Test → Deploy
+- Lead reviews PR, requests changes or approves.
+- After merge to `dev`, QA and testing happen on `dev`.
+- When `dev` is stable, lead merges `dev` → `main`.  
+  ```bash
+  git checkout main
+  git pull origin main
+  git merge dev
+  git push origin main
+  ```
+- Production deployment is triggered from `main`.
+
+---
+
+### Step 8 — Clean up
+After a branch is merged and no longer needed:
+```bash
+git branch -d feature/nikhil-homepage
+git push origin --delete feature/nikhil-homepage
+```
+
+---
+
+## 3. Naming conventions
+- Feature: `feature/<feature-name>` (example: `feature/billing-dashboard`)  
+- Fix: `fix/<issue>`  
+- Hotfix: `hotfix/<issue>`  
+- Docs/chore: `docs/<...>`, `chore/<...>`
+
+---
+
+## 4. Common mistakes & how to avoid them
+- **Never commit directly to `main`.** Use feature branches.  
+- **Always pull before pushing.** `git pull origin <branch>`  
+- **Keep commits small and focused.** Easier to review.  
+- **Don’t force-push (`--force`)** unless told and coordinated.
+
+---
+
+## 5. GitHub UI quick guide (for non-technical reviewers)
+- **Code** tab → view files.  
+- **Branches** → see all branches and statuses.  
+- **Pull requests** → create & review PRs.  
+- **Actions** → CI builds/tests (if configured).  
+- **Projects / Issues** → task tracking (if used).
+
+---
+
+## 6. Example full workflow (billing dashboard)
+```bash
+git clone https://github.com/BillNeXX-AI-Technologies/BNX-PLATFORM.git
+cd BNX-PLATFORM
+git checkout main
+git pull origin main
+git checkout dev
+git pull origin dev
+git checkout -b feature/billing-dashboard
+# code...
+git add .
+git commit -m "feat(billing): add dashboard with charts"
+git push origin feature/billing-dashboard
+# create PR (feature/billing-dashboard -> dev)
+# after review, merge to dev, test, then merge dev -> main
+```
+
+---
+
+## 7. Checklist before raising PR
+- [ ] Branch created from latest `dev`  
+- [ ] Code builds locally / UI tested on different screen sizes (if frontend)  
+- [ ] No console errors / broken tests  
+- [ ] Commit messages are clear  
+- [ ] PR description contains testing steps and screenshots (UI)  
+
+---
+
+## 8. Contact & Support
+If stuck, ping on:
+- **Slack/WhatsApp**: BillNeXX group  
+- **Repo PR**: add comments in PR and tag `@ravivit`  
+- **Email**: contact@billnexx.com
+
+---
+
+## 9. Appendix (Helpful git commands)
+```bash
+# show current branch
+git branch
+
+# switch branch
+git checkout dev
+
+# create branch
+git checkout -b feature/name
+
+# push current branch
+git push origin HEAD
+
+# delete branch locally
+git branch -d feature/name
+
+# delete branch remotely
+git push origin --delete feature/name
+```
+
+---
+
+_End of guide — ready to be pasted as `README_FOR_INTERNS.md` or `README.md` in BNX-PLATFORM._
+
+
