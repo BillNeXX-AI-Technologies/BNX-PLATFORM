@@ -324,7 +324,7 @@ BillNeXX-AI-Technologies/
 
 ---
 
-## 🌐 10. Official Project Links
+## 🌐 10. Social official Links
 
 | Platform       | Link                                                              |
 | -------------- | ----------------------------------------------------------------- |
